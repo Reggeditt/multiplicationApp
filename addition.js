@@ -1,29 +1,27 @@
-const num1 = Math.ceil(Math.random()*10);
-const num2 = Math.ceil(Math.random()*10);
-const correctAns = num1 + num2;
-const inputElement = document.getElementById('input')
-const questionElement = document.getElementById('question')
-const scoreElement = document.getElementById('score');
-const debugEl = document.getElementById('debugger')
-
-questionElement.innerText= `what is ${num2} plus ${num1}?`
-
-if(window.localStorage.getItem('addScore') == null){
-    window.localStorage.setItem('addScore', '0')
+const a = Math.ceil(Math.random()*10)
+const b = Math.ceil(Math.random()*10)
+const correctAnswer = a + b;
+const questionEl = document.getElementById('question')
+const scoreEl = document.getElementById('score')
+const inputEl = document.getElementById('input')
+questionEl.innerText = `what is ${a} plus ${b}`
+if(window.localStorage.getItem('scoreAdd')== undefined){
+    window.localStorage.setItem('scoreAdd', '0');
 }
 
-const userAns = +inputElement.value;
 function checkAddition(){
-    if (userAns == correctAns){
-        debugEl.innerText = `My debugger says sth`
-        let score = Number(window.localStorage.getItem('addScore'))
-        score += 1;
-        window.localStorage.setItem('addScore', JSON.stringify(score));
-    }else if(!userAns==correctAns){
-        let score = Number(window.localStorage.getItem('addScore'))
-        score -= 1;
-        window.localStorage.setItem('addScore', JSON.stringify(score));
-    }
+    document.getElementById('form').addEventListener('submit', ()=>{
+        const userAnswer = +inputEl.value;
+        if(userAnswer==correctAnswer){
+            let scores = Number(window.localStorage.getItem('scoreAdd'))
+            scores += 1;
+            window.localStorage.setItem('scoreAdd', JSON.stringify(scores))
+        }else{
+            let scores = Number(window.localStorage.getItem('scoreAdd'))
+            scores -= 1;
+            window.localStorage.setItem('scoreAdd', JSON.stringify(scores))
+        }
+    });
+   
 }
-
-scoreElement.innerText= `score: ${Number(window.localStorage.getItem('addScore'))}`
+scoreEl.innerText = `score: ${window.localStorage.getItem('scoreAdd')}`

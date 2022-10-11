@@ -10,7 +10,6 @@ question.innerText=`what is ${num1} multiplied by ${num2}?`
 if(Number(window.localStorage.getItem('score'))== null){
     window.localStorage.setItem('score', '0');
 }
-scoreDisplay.innerText = `score = ${score}`;
 function game(){
     document.getElementById('form').addEventListener("submit", ()=>{
         const userAns = inputElement.value
