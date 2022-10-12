@@ -11,19 +11,20 @@
     <div>
         <h3>Choose any of the math games below to play</h3>
         <ul>
-            <li><a href="divisionPage.html">Division Game</a></li>
-            <li><a href="multiplicationPage.html">Multiplication Game</a></li>
             <li><a href="additionPage.html">Addition Game</a></li>
             <li><a href="subtractionPage.html">Subtraction Game</a></li>
+            <li><a href="multiplicationPage.html">Multiplication Game</a></li>
+            <li><a href="divisionPage.html">Division Game</a></li>
             <li><a href="index.html">click here to go back to the homepage</a></li>
             
         </ul>
     </div>
-    <form id="divform" class="divform">
-        <h4 class="score" id="score"></h4>
+    <form id="form" class="form">
+        <h4 class="score" id="score">score: 0</h4>
         <h1 class="question" id="question"></h1>
         <input type="number" placeholder="enter your answer here" autofocus autocomplete="off" id="input" class="input">
-        <button type="submit" class="btn" onclick="checkDivision()">Submit</button>    
+        <button type="submit" class="btn" onclick="checkDivision()">Submit</button>   
+        <button onclick="window.localStorage.setItem('divScore', '0');" type="reset" class="reset">click to restart the game</button> 
     </form>
     <script src="division.js"></script>
 </body>

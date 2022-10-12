@@ -11,10 +11,10 @@
     <div>
         <h3>Choose any of the math games below to play</h3>
         <ul>
-            <li><a href="divisionPage.html">Division Game</a></li>
-            <li><a href="multiplicationPage.html">Multiplication Game</a></li>
             <li><a href="additionPage.html">Addition Game</a></li>
             <li><a href="subtractionPage.html">Subtraction Game</a></li>
+            <li><a href="multiplicationPage.html">Multiplication Game</a></li>
+            <li><a href="divisionPage.html">Division Game</a></li>
             <li><a href="index.html">click here to go back to the homepage</a></li>
             
         </ul>
@@ -24,7 +24,8 @@
         <h4 class="score" id="score"></h4>
         <h1 class="question" id="question"></h1>
         <input type="number" class="input" id="input" placeholder="enter your answer here" autofocus autocomplete="off">
-        <button type = "submit"  class="btn" onclick="checkAddition()">Submit</button>        
+        <button type = "submit"  class="btn" onclick="checkAddition()">Submit</button>
+        <button type="reset" class="reset" onclick="window.localStorage.setItem('scoreAdd', '0');">click to restart the game</button>        
     </form>
     <script src="addition.js"></script>
 </body>

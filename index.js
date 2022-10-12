@@ -28,4 +28,11 @@ function game(){
         
     }); 
 }
+function reset(){
+    document.getElementById('form').addEventListener("rese", ()=>{
+        window.localStorage.clear();
+    });
+    
+}
+
 scoreDisplay.innerText = `score = ${Number(window.localStorage.getItem('score'))}`;

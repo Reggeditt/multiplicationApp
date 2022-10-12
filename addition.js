@@ -24,4 +24,10 @@ function checkAddition(){
     });
    
 }
+function reset(){
+    document.getElementById('form').addEventListener('reset', ()=>{
+        window.localStorage.setItem('scoreAdd', '0');
+    });
+    
+}
 scoreEl.innerText = `score: ${window.localStorage.getItem('scoreAdd')}`

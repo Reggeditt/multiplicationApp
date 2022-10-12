@@ -11,11 +11,11 @@
     <div>
         <h3>Choose any of the math games below to play</h3>
         <ul>
-            <li><a href="divisionPage.html">Division Game</a></li>
-            <li><a href="multiplicationPage.html">Multiplication Game</a></li>
             <li><a href="additionPage.html">Addition Game</a></li>
             <li><a href="subtractionPage.html">Subtraction Game</a></li>
-            <li><a href="index.html">click here to go back to the homepage</a></li>
+            <li><a href="multiplicationPage.html">Multiplication Game</a></li>
+            <li><a href="divisionPage.html">Division Game</a></li>
+           <li><a href="index.html">click here to go back to the homepage</a></li>
             
         </ul>
     </div>
@@ -24,6 +24,7 @@
         <h1 id="question">what is 1 multiplied by 1?</h1>
         <input type="number" class="input" id="input" placeholder="enter your answer" autofocus autocomplete="off"><br>
         <button onclick="game()" type="submit" class="btn">Submit</button>
+        <button onclick=" window.localStorage.setItem('score', '0')" type="reset" class="reset">click to restart the game</button>
     </form>
    
     <script src="index.js"></script>

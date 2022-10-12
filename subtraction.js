@@ -26,4 +26,11 @@ function checkSubtraction(){
         }
     })
 }
+function reset(){
+    document.getElementById('form').addEventListener('reset', ()=>{
+        window.localStorage.setItem('subScore', '0');
+    });
+    
+}
+
 scoreEl.innerText = `score: ${window.localStorage.getItem('subScore')}`

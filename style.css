@@ -62,3 +62,9 @@ body{
     color: green;
     text-align: right;
 }
+.reset{
+    background-color: rgb(241, 151, 151);
+    border-radius: 5%;
+    padding: 7px;
+    color: aqua;
+}

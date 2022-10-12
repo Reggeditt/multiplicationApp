@@ -12,7 +12,7 @@ if(window.localStorage.getItem('divScore') == undefined){
 }
 
 function checkDivision(){
-    document.getElementById('divform').addEventListener('submit', ()=>{
+    document.getElementById('form').addEventListener('submit', ()=>{
         const userAns = +inputElement.value;
         if (userAns == correctAns){
             let score = Number(window.localStorage.getItem('divScore'))
@@ -26,5 +26,12 @@ function checkDivision(){
     })
     
 }
+function reset(){
+    document.getElementById('form').addEventListener('reset', ()=>{
+        window.localStorage.setItem('divScore', '0');
+    });
+    
+}
+
 
 scoreElement.innerText=`score: ${Number(window.localStorage.getItem('divScore'))}`
